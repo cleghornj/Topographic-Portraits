@@ -1,1 +1,60 @@
-My GitHub Page
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Topographic Portraits</title>
+<link rel="shortcut icon" href="favicon.ico">
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<link rel="stylesheet" href="css/stylesheet.css" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style> 
+	@font-face {
+	font-family: chivo;
+	src: url('Fonts/Chivo-Regular.ttf');
+	}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<a href="index.html"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true" style="margin-top:10px; color: white"></span>  Back</a>
+  			
+		</div>
+</nav>
+
+
+
+<div class="container">
+<div class="img_view" id="img_view"><img src="images/michael_big.jpg"> </div>
+<ul id="thumbs">
+<h1>TOPOGRAPHIC PORTRAITS</h1>
+<p>This collection of work is the product of a Summer Undergraduate Research Fellowship designed as a creative project that used scientific methods in order to create fine art.  The goal was to explore the relationship between a person and a sense of place and to create nontraditional portraits. These portraits focus less on the likeness of an individual and explore the link between people and the affinity they have for particular geographic locations. Each portrait was created by taking measurements of an individual’s face that were translated into “elevations”. This data was then used to produce a topographic map using a specialized spatial analysis software called ESRI ArcMap. The interpolated map was overlaid onto a United States Geological Survey quadrangle map of a location significant to each individual. Some individuals chose their birthplace, others chose a place that they had a life changing experience. The result of this project was a collection of portraits that capture the individual's personality and the connection they have with geography.</p>
+<div class= "thumbs">
+<li><a class="thumbnail"> <img src="images/michael_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/sara_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/kevin_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/andy_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/xak_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/laura_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/wy_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/zach_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+<li><a class="thumbnail"> <img src="images/jared_thumb.jpg" onclick="changePic(img_view,src)"></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+	
+</div>
+	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<script>
+function changePic(id,src) { 
+	var endValue = (src.length)-9;
+	var link = src.substring(0,endValue)+"big.jpg";
+    id.innerHTML = "<img src="+link+">";
+}
+</script>
+</body>
+</html>
